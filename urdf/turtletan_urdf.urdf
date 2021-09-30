@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="turtletan_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.5716E-17 0.0062359 -0.019176"
+        rpy="0 0 0" />
+      <mass
+        value="4.3245" />
+      <inertia
+        ixx="0.044989"
+        ixy="-8.0371E-10"
+        ixz="-1.2192E-17"
+        iyy="0.047931"
+        iyz="-0.00069391"
+        izz="0.09009" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtletan_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtletan_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="WL">
+    <inertial>
+      <origin
+        xyz="-0.000269180872970313 6.93889390390723E-18 0.0088134285783309"
+        rpy="0 0 0" />
+      <mass
+        value="0.201683168727785" />
+      <inertia
+        ixx="0.000194774742813112"
+        ixy="9.65014302632274E-22"
+        ixz="-4.41604286024824E-08"
+        iyy="0.000194912142408104"
+        iyz="3.09744072106396E-22"
+        izz="0.000378258152885652" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtletan_urdf/meshes/WL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtletan_urdf/meshes/WL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1_WL"
+    type="continuous">
+    <origin
+      xyz="-0.222 0.0023568 -0.05"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="WL" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="WR">
+    <inertial>
+      <origin
+        xyz="-0.000269180872970313 -6.93889390390723E-18 -0.00881342857833087"
+        rpy="0 0 0" />
+      <mass
+        value="0.201683168727785" />
+      <inertia
+        ixx="0.000194774742813112"
+        ixy="-9.65056929884799E-22"
+        ixz="4.41604286024824E-08"
+        iyy="0.000194912142408104"
+        iyz="3.09769357245204E-22"
+        izz="0.000378258152885652" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtletan_urdf/meshes/WR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtletan_urdf/meshes/WR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2_WR"
+    type="continuous">
+    <origin
+      xyz="0.222 0.0023568 -0.05"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="WR" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
